@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
     <div id="nav">
@@ -35,8 +36,8 @@
           </div>
         </div>
         <a href="About-us.html">About us</a>
-        <a href="Blog.html">Blog</a>
-        <a href="Contact-us.html">Contact us</a>
+        <a href="../blog/blog.html">Blog</a>
+        <a href="../contact-us/contact-us.html">Contact us</a>
       </div>
 
       <div class="btns">
@@ -434,7 +435,7 @@
         <h1>Ready to go next <span style="color: #a11d20">Level?</span></h1>
       </div>
     </div>
-    <div class="footer">../
+    <div class="footer">
       <div class="main">
         <img src="../Assets/MKH Logo.png" alt="" class="mkh-logo" />
         <div class="content">
@@ -457,9 +458,12 @@
           <h6 style="font-size: 1.2vw ; font-weight: 600; color: #a11d20;">Subscribe</h6>
           <p>Stay informed wiht our latest news and updates</p>
           <div class="input-submit">
-            <input type="text" name="" id="" placeholder="Enter your Email" />
-            <button class="submit">Submit</button>
-          </div>
+            <form id="email-form">
+              <input type="text" name="email" placeholder="Enter your Email" />
+              <button class="submit">Subscribe</button>
+            </form>
+            </div>
+          <p id="subscription-response"></p>
 
           <p style="font-size: 0.98vw;">
             By subscribing, you agree to our Privacy Policy and consent to
