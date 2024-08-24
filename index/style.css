@@ -540,16 +540,16 @@
     padding: 30px;
     position: absolute;
     right: 58px;
-    /* position: relative; */
-    bottom: 60px;
     text-align: center;
+    top: 400px;
+    bottom: 50px;
   }
   #main .how-we-work .video-how-we-work .circle img {
     position: absolute;
-    left: 20px;
-    height: 10vh;
-    bottom: 20px;
-    width: 5vw;
+    left: 36px;
+    height: 5vh;
+    bottom: 32px;
+    width: 2.5vw;
   }
   #main .best-services {
     height: 30%;
@@ -631,7 +631,7 @@
     height: 80px;
     background-color: #fff;
     color: black;
-    font-size: 1rem;
+    font-size: 1.5rem;
     position: absolute;
     transform: translate(40%, 100px);
     border-radius: 37px;
@@ -639,16 +639,15 @@
     align-items: center;
     padding: 20px 25px;
     flex-direction: column;
-  }
-  #page3 .pics-container .container .animation-abs-btn a {
-    margin-top: 8px;
-    color: black;
     text-decoration: none;
-    border-radius: 16px;
-    width: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-weight: 700;
+    transition:  0.7s ease-in 0s;
+    
+  }
+  #page3 .pics-container .container .animation-abs-btn:hover{
+    background-color: transparent;
+    color: #ffffff;
+    backdrop-filter: blur(10px);
     border: 0.5px solid #a11d20;
   }
   @keyframes scroll {
@@ -795,6 +794,9 @@
     height: 50%;
     width: 30%;
     /* background-color: crimson; */
+  }
+  #page5 .testimonial-container .container-1 h6{
+    font-weight: 300; font-size: 1.51vw
   }
   #page5 .testimonial-container .container-1 .readmore {
     height: 30%;
@@ -1209,6 +1211,7 @@
       top: 0px;
       height: 22.05px;
       width: 20.05px;
+      
     }
     #page2  #main .best-services{
       margin-top: 0;
@@ -1216,8 +1219,8 @@
     }
     #page2  #main .best-services .best-services-description{
       margin-left: 0;
-      height: 212.25px;
-      width: 337.8px;
+      height: 33.112vh;
+      width: auto;
       margin-top: 20px;
     }
     #page2  #main .best-services .best-services-description .info{
@@ -1235,12 +1238,133 @@
     }
      
     #page3{
-      background-color: blue;
-      margin-top: 40vh;
+      /* background-color: blue; */
+      margin-top: 550px;
+      height: 90vh;
+      position: static;
     }
     #page3 .portfolio-container{
       height: 92.14px;
       transform: translateY(50px);
+    }
+    #page3 .pics-container{
+      /* background-color: crimson; */
+    }
+    #page3 .pics-container .container .animation-abs-btn{
+        height: 48.2px;
+        width: 175.36px;
+        transform: translateY(40px);
+        text-align: center;
+        font-size: 13px;
+        font-weight: 500;
+        padding: 12px;
+        padding-top: 18px;
+    }
+    #page3 .pics-container .container .smm {
+      transform: translate(50.301vw ,5.42vh);
+    }
+    #page4 .container{
+      flex-direction: column;
+      margin-left: 0;
+    }
+    #page4 .container .left{
+      padding: 20px;
+      border: 5px solid #a11d20;
+    }
+    #page4 .container .left, .right{
+      width: auto;
+    }
+    #page4 .container .right{
+      width: auto;
+    }
+    #page4 .container .right .container-info{
+      height: auto;
+      width: auto;
+    }
+    #page4 .container .right .container-info p{
+      font-size: 18px;
+    }
+    #page4 .container .right .container-info h6{
+      font-size: 24.67px;
+    }
+    #page4 .container .right .container-info h1{
+      font-size: 32.12px;
+      width: auto;
+    }
+    #page4 .container .right .btn-container{
+    display: none;
+    }
+    #page5 .Skills{
+      display: none;
+    }
+    #page5 .testimonial-container{
+      transform: translateY(25vh);
+      height: auto;
+      width: auto;
+      flex-direction: column;
+      align-items: flex-start;
+      
+    }
+    #page5 .testimonial-container .container-1{
+      width: auto;
+      margin-left: 45px;
+    }
+    #page5 .testimonial-container .container-1 h1{
+      font-size: 45.66px;
+      width: 350px;
+    }
+    #page5 .testimonial-container .container-1 h6{
+      font-size: 18.26px;
+      font-weight: 400;
+      width: 169.77px;
+      height: 28px;
+    }
+    #page5 .testimonial-container .container2{
+      width: 100%;
+      /* background-color: crimson; */
+    }
+    #page5 .testimonial-container .container2 .client2{
+      display: none;
+    }
+    #page5 .testimonial-container .container2 .client1{
+      width: 270.74px;
+      height: 171.47px;
+      transform: translateX(-50px);
+    }
+    #page5 .testimonial-container .container2 .next{
+      height: 28.5px;
+      width: 28.5px;
+    }
+    #page6{
+      height: 378px;
+      width: 375px;
+      margin-left: 25px;
+      margin-top: 50px;
+      padding: 20px 10px;
+    }  
+    #page6 .page-6-main{
+      height: 250px;
+      width: 335px;
+      /* background-color: crimson; */
+      top: 0;
+      left: -5px;
+    }
+    #page6 .page-6-main h1{
+      font-size: 36px;
+    }
+    #page6 .page-6-main #para{
+      font-size: 16px;
+      font-weight: 400;
+      width: auto;
+    }
+    #page6 .page-6-main .services-quote{
+      width: 245px;
+      height: 64px;
+      margin-top: 20px;
+    }
+    #page6 .page-6-main .services-quote #service{
+      width: 109px;
+      height: 48px;
     }
     #nav .btns {
       margin-left: 30px;
@@ -1292,5 +1416,6 @@
       height: 60px;
       width: 120px;
     }
+
   }
   
