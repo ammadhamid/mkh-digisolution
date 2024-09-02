@@ -32,7 +32,7 @@ body {
   transition: all linear 0.4s;
 }
 #nav {
-  /* background-color: blue; */
+  /* background-color: #000; */
   position: relative;
   height: 100px;
   display: flex;
@@ -178,30 +178,40 @@ body {
   width: 26px;
   margin-top: 20px;
 }
-.main-img{
-  height: 78.00vh;
+.main-img {
+  height: 78vh;
   width: 100%;
   background-image: url(../Assets/contact-us-img.png);
   object-fit: cover;
   background-repeat: no-repeat;
 }
-form{
-  height: 675px;
-  width: 712px;
-  background-color: #fff;
-  transform: translate(90vh , -150px);
+form {
+  height: 100vh;
+  width: 100vw;
+  background-color: transparent;
+  /* transform: translate(90vh , -150px); */
   border-radius: 25px;
   padding: 20px;
+  transform: translateY(-600px);
+}
+input {
+  padding-left: 20px;
+}
+form .form {
+  background-color: #fff;
+  /* background-color: #d53636; */
+  margin-left: 700px;
+  margin-top: 300px;
 }
 form .form .heading {
-  height: 46px;
+  height: 10vh;
   width: auto;
 }
-form .form .heading h1{
+form .form .heading h1 {
   font-weight: 800;
   font-size: 3rem;
 }
-form .form .main-form{
+form .form .main-form {
   /* background-color: crimson; */
   height: 70.51vh;
   width: 45.09vw;
@@ -213,49 +223,46 @@ form .form .main-form .names-container {
   display: flex;
   justify-content: space-around;
 }
-form .form .main-form .names-container #names{
+form .form .main-form .names-container #names {
   width: 50%;
   /* background-color: red; */
   font-size: 1rem;
 }
-form .form .main-form #fname ,#lname{
+form .form .main-form #fname,
+#lname {
   width: 300px;
   height: 42px;
   padding: 10px;
 }
-form .form .main-form .cntainer-of-form label{
+form .form .main-form .cntainer-of-form label {
   width: 100%;
 }
 form .form .main-form .cntainer-of-form {
   margin-top: 20px;
 }
-form .form .main-form .cntainer-of-form #businesse-field{
+form .form .main-form .cntainer-of-form #businesse-field {
   width: 98%;
   height: 42px;
 }
-
-
-
-.privacy-policy{
+.privacy-policy {
   margin-top: 20px;
   /* display: flex; */
-
 }
-.privacy-policy a{
+.privacy-policy a {
   text-decoration: none;
   color: #000;
 }
-.submit{
+.submit {
   margin-top: 20px;
   background: #a11d20;
   border: 1px solid #a11d20;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
-  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 16px;
@@ -276,51 +283,51 @@ form .form .main-form .cntainer-of-form #businesse-field{
   background-position: 0 0;
   color: #000;
 }
-
-.button-24:active {
-  opacity: .5;
+.submit:active {
+  opacity: 0.5;
 }
-.contact-us-small{
+
+.contact-us-small {
   width: 50vw;
   height: 50vh;
-  transform: translateY(400px);
+  transform: translateY(100px);
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
 }
-.contact-us-small .line{
+.contact-us-small .line {
   height: 100%;
-  width: 50px;  background-color: #a11d20;
+  width: 50px;
+  background-color: #a11d20;
   transform: translateX(-60px);
   border-radius: 10px;
 }
 
-.contact-us-small .main{
-  height:100%;
-  width:80%;
+.contact-us-small .main {
+  height: 100%;
+  width: 80%;
   transform: translateX(-90px);
 }
 
-.contact-us-small .main h1{
+.contact-us-small .main h1 {
   font-size: 2.5rem;
   font-weight: 900;
 }
-.contact-us-small .main p{
-font-size: 1rem;
+.contact-us-small .main p {
+  font-size: 1rem;
 }
-.contact-us-small .main .container{
+.contact-us-small .main .container {
   height: 60px;
   margin-top: 10px;
 }
-.contact-us-small .main .container h6{
+.contact-us-small .main .container h6 {
   font-size: 1rem;
   font-weight: 700;
 }
-.contact-us-small .main .container p{
+.contact-us-small .main .container p {
   font-size: 0.8rem;
   font-weight: 400;
 }
-
 
 #bg {
   height: auto;
@@ -339,7 +346,7 @@ font-size: 1rem;
   z-index: -1;
 }
 #page7 {
-  transform: translateY(50vh);
+  transform: translateY(-50vh);
   height: 30vh;
   width: 100%;
   /* background-color: blue; */
@@ -360,9 +367,10 @@ font-size: 1rem;
 .footer {
   height: 80vh;
   width: 100%;
-  background-image: url("../Assets/Footer-blur.png");
+  background: linear-gradient(to bottom, rgb(243, 220, 224), white);
   /* background-color: rgb(154, 154, 171); */
-  margin-top: 850px;
+  /* margin-top: 850px; */
+  transform: translateY(-100px);
 }
 .footer .main {
   display: flex;
@@ -456,4 +464,160 @@ font-size: 1rem;
   margin-top: 30px;
   margin-left: 2vw;
   /* background-color: #fff; */
+}
+
+@media (max-width: 480px) {
+  #nav .btns {
+    margin-left: 30px;
+    height: 50px;
+    width: 50vw;
+  }
+  #nav {
+    padding: 10px;
+    height: 80px;
+  }
+  #nav img {
+    width: 73px;
+    height: 37.5px;
+  }
+  #nav #nlinks {
+    display: none;
+  }
+  #nav #menu {
+    display: initial;
+    height: 26px;
+    width: 26px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  /* Yahana Copy karraha hun */
+  #bg {
+    height: 5vh;
+  }
+  #bg .blur {
+    height: 100%;
+  }
+
+  form .form {
+    margin-left: 0px;
+    margin-top: 0px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    height: 70%;
+  }
+  .contact-us-small {
+    width: 100vw;
+    height: 50vh;
+    transform: translate(80px, 500px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .contact-us-small .line {
+    /* height: 100%; */
+    transform: translate(-100px, 20px);
+  }
+  #lname {
+    margin-top: 20px;
+  }
+  input {
+    padding-left: 10px;
+  }
+
+  /*  Footer  */
+
+  #page7 {
+    height: 300px;
+    transform: translateY(-350px);
+  }
+  #page7 .page7-main h1 {
+    font-size: 72px;
+  }
+  .footer {
+    height: auto;
+    margin-top: 1000px;
+    padding: 20px;
+    background-position: center;
+    transform: translateY(-1250px);
+  }
+
+  .footer .main {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .footer .main img {
+    width: 80px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-right: 230px;
+    transform: translateX(-20px);
+  }
+
+  .footer .main .content,
+  .footer .main .resources {
+    font-size: 3.5vw;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .main .newsletter {
+    width: 100%;
+    margin-top: 0;
+    gap: 10px;
+    font-size: 3vw;
+  }
+
+  .main .newsletter .input-submit {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .main .newsletter .input-submit input,
+  .main .newsletter .input-submit button {
+    width: 100%;
+    height: 40px;
+  }
+
+  .line {
+    width: 90%;
+  }
+
+  .footer .final-links {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .footer .final-links .f-l-content {
+    font-size: 4vw;
+    gap: 10px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .main .newsletter h6 {
+    font-size: 1rem;
+  }
+  .main .newsletter p {
+    font-size: 1rem;
+  }
+  .footer .final-links .f-l-content :nth-child(1),
+  .footer .final-links .f-l-content :nth-child(2),
+  .footer .final-links .f-l-content :nth-child(3),
+  .footer .final-links .f-l-content :nth-child(4) {
+    transform: none;
+    width: auto;
+  }
+
+  .footer .final-links .social-sites {
+    width: 50%;
+    transform: none;
+    justify-content: center;
+    margin: 10px auto;
+  }
+  /* Yahan to copy rahegi */
 }

@@ -8,18 +8,65 @@
 //   Blur.style.top = dets.y - 250 + "px";
 // });
 
-
 // gsap.to(".animation-abs-btn" ,{
 // })
-const express = require('express');
-const nodemailer = require('nodemailer');
-const bodyParsr = require('body-parser');
-const  dotEnv = require('dotenv');
 
-const app = express();
+// DOM elements
+const menuBtn = document.querySelector("#menu");
+const mobNav = document.querySelector("#mobile-nlinks");
+const mobClose = document.querySelector("#nav #mobile-nlinks #close");
 
-const svgElement = document.querySelector('#man-svg');
-if (svgElement) {
-    svgElement.remove();
-    console.log("svg deleted");
-}
+const dropdownPairs = [
+  {
+    button: document.querySelector(".graphic-design"),
+    container: document.querySelector(".graphic-design-dropdown"),
+  },
+  {
+    button: document.querySelector(".web-dev"),
+    container: document.querySelector(".web-dev-dropdown"),
+  },
+  {
+    button: document.querySelector(".social-media-advertising"),
+    container: document.querySelector(".SMA-dropdown"),
+  },
+  {
+    button: document.querySelector(".content-marketing"),
+    container: document.querySelector(".CM-dropdown"),
+  },
+  {
+    button: document.querySelector(".seo"),
+    container: document.querySelector(".SEO-dropdown"),
+  },
+  
+];
+
+const toggleDisplay = (element, display) => {
+  element.style.display = display;
+};
+
+menuBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  toggleDisplay(mobNav, "inline");
+});
+
+mobClose.addEventListener("click", (e) => {
+  e.preventDefault();
+  toggleDisplay(mobNav, "none");
+});
+
+const setupHoverListeners = (button, container) => {
+  const showContainer = () => toggleDisplay(container, "flex");
+  const hideContainer = () => {
+    if (!container.matches(":hover")) {
+      toggleDisplay(container, "none");
+    }
+  };
+
+  button.addEventListener("mouseenter", showContainer);
+  button.addEventListener("mouseleave", hideContainer);
+  container.addEventListener("mouseleave", hideContainer);
+};
+
+dropdownPairs.forEach((pair) => {
+  setupHoverListeners(pair.button, pair.container);
+});

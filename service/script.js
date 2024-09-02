@@ -9,17 +9,10 @@
 // });
 
 
-// gsap.to(".animation-abs-btn" ,{
-// })
-const express = require('express');
-const nodemailer = require('nodemailer');
-const bodyParsr = require('body-parser');
-const  dotEnv = require('dotenv');
-
-const app = express();
-
-const svgElement = document.querySelector('#man-svg');
-if (svgElement) {
-    svgElement.remove();
-    console.log("svg deleted");
+const innerContainer = document.querySelectorAll(".inner-conatiner");
+for (const conatiner of innerContainer) {
+    conatiner.addEventListener("click" , redirectPage = ()=>{
+        window.location.href = '../subpages/web-dev.html';
+    });
 }
+

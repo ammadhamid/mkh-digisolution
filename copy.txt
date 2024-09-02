@@ -1,0 +1,40 @@
+Final Touch up
+
+Web Dev 
+Index
+service
+our_work
+blog
+about
+Contact us
+
+Subpages bannay sab ky files attach krni hain sbme
+
+
+
+
+
+
+#nav #mobile-nlinks {
+  /* height: 40vh;
+  width: 50% ;
+  position: fixed;
+  right: 0;
+  top: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  flex-direction: column;
+  background-color: rgb(253, 253, 253); */
+  /* backdrop-filter: blur(10px); */
+  height:   50vh;
+  background-color: white;
+  width: 500px;
+  transform: translate(-50px , 200px);
+}
+#nav #mobile-nlinks a {
+  /* margin-left: 20px;
+  text-decoration: none;
+  color: #050605; */
+}
