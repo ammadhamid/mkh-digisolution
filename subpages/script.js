@@ -1,22 +1,19 @@
-// var crsr = document.querySelector("#cursor");
-// var Blur = document.querySelector("#cursor-blur");
+var crsr = document.querySelector("#cursor");
+var Blur = document.querySelector("#cursor-blur");
 
-// document.addEventListener("mousemove", function (dets) {
-//   crsr.style.left = dets.x + "px";
-//   crsr.style.top = dets.y + "px";
-//   Blur.style.left = dets.x - 250 + "px";
-//   Blur.style.top = dets.y - 250 + "px";
-// });
+document.addEventListener("mousemove", function (dets) {
+  crsr.style.left = dets.x + "px";
+  crsr.style.top = dets.y + "px";
+  Blur.style.left = dets.x - 250 + "px";
+  Blur.style.top = dets.y - 250 + "px";
+});
 
 // gsap.to(".animation-abs-btn" ,{
 // })
 
 // DOM elements
-const menuBtn = document.querySelector("#menu");
-const mobNav = document.querySelector("#mobile-nlinks");
-const mobClose = document.querySelector("#nav #mobile-nlinks #close");
 
-const dropdownPairs = [
+const dekstopdropdownPairs = [
   {
     button: document.querySelector(".graphic-design"),
     container: document.querySelector(".graphic-design-dropdown"),
@@ -37,22 +34,11 @@ const dropdownPairs = [
     button: document.querySelector(".seo"),
     container: document.querySelector(".SEO-dropdown"),
   },
-  
 ];
 
 const toggleDisplay = (element, display) => {
   element.style.display = display;
 };
-
-menuBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  toggleDisplay(mobNav, "inline");
-});
-
-mobClose.addEventListener("click", (e) => {
-  e.preventDefault();
-  toggleDisplay(mobNav, "none");
-});
 
 const setupHoverListeners = (button, container) => {
   const showContainer = () => toggleDisplay(container, "flex");
@@ -67,6 +53,77 @@ const setupHoverListeners = (button, container) => {
   container.addEventListener("mouseleave", hideContainer);
 };
 
-dropdownPairs.forEach((pair) => {
+dekstopdropdownPairs.forEach((pair) => {
   setupHoverListeners(pair.button, pair.container);
+});
+
+// mobile  Ki Scipt hai
+
+const menuIcon = document.getElementById("menu");
+const mobileNav = document.getElementById("mobile-nlinks");
+const closeButton = document.getElementById("close");
+
+menuIcon.addEventListener("click", (e) => {
+  e.preventDefault();
+  mobileNav.classList.toggle("active");
+});
+
+closeButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  mobileNav.classList.remove("active");
+});
+
+
+
+
+const mobdropBtn = document.querySelector(".mob-dropbtn");
+
+
+  mobdropBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+  });
+
+
+
+  mobdropBtn.addEventListener("dblclick", () => {
+    window.location.href = "../service/service.html";
+  });
+
+
+
+const mobDropdownPairs = [
+  {
+    button: document.querySelector(".mob-graphic-btn"),
+    container: document.querySelector(".mob-graphic-design-dropdown"),
+  },
+  {
+    button: document.querySelector(".mob-web-dev-btn"),
+    container: document.querySelector(".mob-web-dev-container"),
+  },
+  {
+    button: document.querySelector(".mob-social-media"),
+    container: document.querySelector(".mob-SMA-dropdown"),
+  },
+  {
+    button: document.querySelector(".mob-content-marketing"),
+    container: document.querySelector(".mob-CM-dropdown"),
+  },
+  {
+    button: document.querySelector(".mob-seo"),
+    container: document.querySelector(".mob-SEO-dropdown"),
+  },
+];
+const setupClicklistener = (button, container) => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (container.style.display === "flex") {
+      container.style.display = "none";
+    } else {
+      container.style.display = "flex";
+    }
+  });
+};
+
+mobDropdownPairs.forEach((pair) => {
+  setupClicklistener(pair.button, pair.container);
 });

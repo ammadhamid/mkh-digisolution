@@ -225,24 +225,65 @@ body {
 .dropdown:hover .dropbtn {
   background-color: #ddd;
 }
+/* General Mobile Navigation Styles */
+#nav #mobile-nlinks {
+  width: 100vw;
+  height: 50vh; /* Auto height for better responsiveness */
+  position: fixed;
+  top: -100%;
+  right: 0; /* Initially hide off-screen */
+  background-color: rgba(255, 255, 255, 0.883); /* Light background with some transparency */
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: all 0.3s ease-in-out; /* Smooth transition for slide-in effect */
+  background : none;
+}
 
+/* Show mobile navigation when active */
+#nav #mobile-nlinks.active {
+  top: 0; /* Slide-in from the right */
+}
+
+/* Close button style */
+#nav #mobile-nlinks #close {
+  align-self: flex-end;
+  cursor: pointer;
+  margin-bottom: 20px;height: 50px;
+  width: 50px;
+  position: relative;
+}
+
+/* Mobile Navigation Links */
+#nav #mobile-nlinks a {
+  text-decoration: none;
+  color: #050605;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: left; 
+  transition: background-color 0.3s ease;
+}
+
+#nav #mobile-nlinks a:hover {
+  color: white;
+  background-color: #a11d20; /* Matching your site's color scheme */
+  border-radius: 5px;
+  padding-left: 15px; /* Indent on hover */
+}
+
+/* Hamburger Menu Icon */
 #nav #menu {
   display: none;
+  cursor: pointer;
+  margin-left: auto;
 }
-#nav #mobile-nlinks{
-  display: none;
-}
-#nav #mobile-nlinks a:hover {
-  color: rgb(255, 255, 255);
-  border: 0.5px solid #a11d20;
-  background-color: rgb(80, 80, 80);
-}
-#nav #mobile-nlinks #close {
-  margin-left: 20px;
-  height: 26px;
-  width: 26px;
-  margin-top: 20px;
-}
+
+/* Nav ka end horha ahai yahan normal wlay ka  */
+
  #page1-subpages {
     height: 142.74vh;
     width: 100%;
@@ -291,7 +332,6 @@ body {
     align-items: center;
     margin-top: 100px;
   }
-
 
   .red-container {
     width: 100%;
@@ -391,7 +431,7 @@ li p {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 400px;
+    /* margin-bottom: 400px; */
   }
 
   .service-heading-page-3 h1 {
@@ -445,7 +485,7 @@ li p {
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    transform: translateY(-300px);
+    /* transform: translateY(-300px); */
   }
   
   #page3-subpage .page3-subpage-main .innercontainer {
@@ -495,7 +535,7 @@ li p {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transform: translateY(-100px);
+    /* transform: translateY(-100px); */
   }
 
   .service-heading-3 h1 {
@@ -787,41 +827,91 @@ li p {
 }
 
   @media (max-width: 480px) {
-    #nav .btns {
-      margin-left: 30px;
-      height: 50px;
-      width: 50vw;
-    }
-    #nav {
-      padding: 10px;
-      height: 80px;
-    }
-    #nav img {
-      width: 73px;
-      height: 37.5px;
-    }
-    #nav #nlinks {
-      display: none;
-    }
-    #nav #menu {
-      display: initial;
-      height: 26px;
-      width: 26px;
-      display: flex;
-      justify-content: center;
-      align-content: center;
-    }
-    #nav #mobile-nlinks{
-      width: auto ; 
-      background-color: #fff;
-      height: auto;
-      position: relative;
-      right: 25px;
-      top: 100px;
-      display: inline;
-    }
-
+  #nav .btns {
+    margin: 0 auto;
+    transform: translateX(15px);
+    width: auto;
+    height: 50px;
   }
+  #nav {
+    padding: 10px;
+    height: 80px;
+    justify-content: space-between;
+  }
+  #nav img {
+    width: 73px;
+    height: 37.5px;
+  }
+  #nav #nlinks {
+    display: none;
+  }
+  #nav #menu {
+    display: block;
+    height: 26px;
+    width: 26px;
+  }
+  /* Mobile Dropdown Styles */
+  #nav .mobile-nav-links-wrapper{
+    height: auto;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+  }
+  #nav .mobile-nav-links-wrapper .dropdown-content {
+  display: none; /* Hide by default */
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.9); /* Light background for dropdown */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-top: 20px;
+}
+/* dropdown-content-a */
+#nav .mobile-nav-links-wrapper .dropdown-content-a {
+  font-size: 1rem;
+  color: #050605;
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee; /* Divider between links */
+}
+
+#nav .mobile-nav-links-wrapper a{
+  /* border-bottom: 2px solid black; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  /* font-size: 1px; */
+}
+
+
+#nav .mobile-nav-links-wrapper .dropdown-content a:hover {
+  background-color: #a11d20;
+  color: white;
+  border-radius: 5px;
+}
+
+
+/* Toggle dropdown content on click */
+#nav .mobile-nav-links-wrapper .dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.mob-graphic-design-dropdown ,
+.mob-web-dev-container ,
+.mob-SMA-dropdown , 
+.mob-CM-dropdown ,
+.mob-SEO-dropdown{
+  display: flex;
+  flex-direction: column;
+  /* height: 100px; */
+  background-color: rgb(255, 255, 255);
+  width: 170px;
+  margin-left: 20px;
+  display: none;  
+}
+}
+
+  
   /* Nav ki media queries ka end */
   
   @media (max-width:480px) {
@@ -915,7 +1005,7 @@ li p {
 }
 
 .service-heading-3{
-  transform: translateY(100px);
+  transform: translateY(500px);
 }
 .service-heading-3 h1{
   font-size: 2rem;
@@ -1088,6 +1178,11 @@ li {
 
 
 @media (max-width: 768px) {
+#page3-subpage{
+  /* transform: translateY(400px); */
+  margin-top: 400px;
+}
+
   #page3-subpage .page3-subpage-main {
     flex-direction: column; 
     align-items: center; 
@@ -1122,7 +1217,7 @@ li {
   #page4-subpages {
     height: auto; 
     padding: 20px; 
-    transform: translateY(-400px);
+    /* transform: translateY(-400px); */
   }
 
   #page4-subpages .main-page-4-subpage {
@@ -1133,6 +1228,10 @@ li {
   #page4-subpages .main-page-4-subpage .top {
     width: 100%; 
     margin-bottom: 20px; 
+  }
+  #page4-subpages .main-page-4-subpage .top .main-of-top .info .img{
+    height: 100px;
+    width: 200px;
   }
   #page4-subpages .main-page-4-subpage .top .main-of-top .info h1{
     font-size: 1.5em;
@@ -1171,13 +1270,14 @@ li {
 
   #page4-subpages .main-page-4-subpage .bottom .main-container .inner-container .img-heading {
     width: 100%; 
+    flex-direction: column;
     justify-content: flex-start; 
     margin-bottom: 10px; 
   }
 
   #page4-subpages .main-page-4-subpage .bottom .main-container .inner-container .img-heading .img {
-    width: 20%; 
-    height: auto; 
+    width: 100px; 
+    height: 80px; 
     margin-right: 10px; 
   }
 
@@ -1210,6 +1310,11 @@ li {
 .heading-line {
     width: 50px; 
 }
+.line {
+  border-bottom: 1px solid #a11d20;
+  margin-top: 5px
+}
+
 }
 
 
