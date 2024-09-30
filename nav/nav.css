@@ -1,0 +1,516 @@
+
+/* Get a quote container ka start hai  */
+/* Main Styles */
+
+.get-a-quote-container {
+  height: auto;
+  width: 800px;
+  position: absolute;
+  left: 28%;
+  z-index: 999;
+  display: none;
+}
+
+.modal {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 100%;
+  height: auto;
+}
+
+.modal #close {
+  height: 26px;
+  width: 26px;
+  position: absolute;
+  right: 5px;
+  top: 8px;
+  cursor: pointer;
+}
+
+h1 {
+  color: #000;
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+p {
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+#select-a-service {
+  width: 97%;
+}
+
+.phone-input select {
+  width: 70px;
+  margin-right: 10px;
+}
+
+.additional-details {
+  margin-top: 20px;
+}
+
+.additional-details h2 {
+  color: black;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.submit-button-process-my-request {
+  background-color: #a11d20;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Responsive Styles */
+
+/* For Tablets (768px and below) */
+@media (max-width: 768px) {
+  .get-a-quote-container {
+    width: 90%; /* Make it take most of the screen */
+    left: 5%; /* Center it with small left margin */
+    padding: 20px;
+  }
+
+  .form-row {
+    flex-direction: column; /* Stack form inputs on top of each other */
+  }
+
+  input,
+  select {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .submit-button-process-my-request {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #select-a-service {
+    width: 100%; /* Take full width on small screens */
+  }
+}
+
+/* For Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+  .get-a-quote-container {
+    width: 100%; /* Full width on mobile */
+    left: 0; /* Remove left margin for full screen */
+    top: 55px; /* Start from the top */
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .form-row {
+    gap: 10px;
+  }
+
+  input,
+  select {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .submit-button-process-my-request {
+    font-size: 14px;
+    padding: 12px;
+  }
+  .modal #close {
+    margin-right: 15px;
+    margin-top: 15px;
+  }
+}
+
+/* Get a quote contaienr ka end hai  */
+
+#nav {
+  /* background-color: #000; */
+  position: relative;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 0 40px;
+}
+
+#nav img {
+  width: 157.99px;
+  height: 65px;
+}
+
+#nlinks {
+  display: flex;
+  justify-content: space-evenly;
+  flex-grow: 0.5;
+  /* margin-left: 20px; */
+  font-size: 1vw;
+  /* background-color: green; */
+}
+
+#nlinks a {
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+  margin: 0 10px;
+  min-width: 100px;
+  /* background-color: red; */
+  border-radius: 8px;
+  transition: 0.2s linear 1ms;
+}
+#nlinks a:hover {
+  color: rgb(255, 255, 255);
+  background-color: #a11d20;
+  transform: translateY(-10px);
+  /* transition: 0.1s ease-in-out; */
+}
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-left: 5vw;
+}
+
+.btns .Quote {
+  border: 1px solid black;
+  border-radius: 50px;
+  padding: 13px 16px;
+  text-align: center;
+  cursor: pointer;
+  width: 200px;
+  transition: 0.5s linear 1ms;
+}
+
+.Quote:hover {
+  background-color: #a11d20;
+  color: white;
+  border: none;
+  transform: translateY(-10px);
+}
+/* Parent container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+  text-decoration: none;
+  color: black;
+  /* background-color: #f1f1f1; */
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  /* background-color: #5a5353; */
+  backdrop-filter: blur(10px);
+  width: 80vw;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 16px;
+  top: 20px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content .dropdown-content-a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.8rem;
+  width: 200px;
+  text-align: start;
+}
+
+.graphic-design-dropdown {
+  width: 20%;
+  background-color: white;
+  height: 60%;
+  position: absolute;
+  left: 12%;
+  top: -8px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  gap: 2px;
+}
+.web-dev-dropdown {
+  width: 20%;
+  background-color: white;
+  height: 60%;
+  position: absolute;
+  left: 12%;
+  top: 20%;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  gap: 2px;
+}
+.SMA-dropdown {
+  width: 20%;
+  background-color: white;
+  height: 60%;
+  position: absolute;
+  left: 12%;
+  top: 30%;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  gap: 2px;
+}
+.CM-dropdown {
+  width: 20%;
+  background-color: white;
+  height: 60%;
+  position: absolute;
+  left: 12%;
+  top: 50%;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  gap: 2px;
+}
+
+.SEO-dropdown {
+  width: 20%;
+  background-color: white;
+  height: 60%;
+  position: absolute;
+  left: 12%;
+  top: 70%;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  gap: 2px;
+}
+
+.dropdown-content a:hover {
+  background-color: #a11d20;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change color of dropdown button on hover */
+.dropdown:hover .dropbtn {
+  background-color: #ddd;
+}
+/* General Mobile Navigation Styles */
+#nav #mobile-nlinks {
+  width: 100vw;
+  height: 50vh; /* Auto height for better responsiveness */
+  position: fixed;
+  top: -100%;
+  right: 0; /* Initially hide off-screen */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.883
+  ); /* Light background with some transparency */
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: all 0.3s ease-in-out; /* Smooth transition for slide-in effect */
+  background: none;
+}
+
+/* Show mobile navigation when active */
+#nav #mobile-nlinks.active {
+  top: 0; /* Slide-in from the right */
+}
+
+/* Close button style */
+#nav #mobile-nlinks #close {
+  align-self: flex-end;
+  cursor: pointer;
+  margin-bottom: 20px;
+  height: 50px;
+  width: 50px;
+  position: relative;
+}
+
+/* Mobile Navigation Links */
+#nav #mobile-nlinks a {
+  text-decoration: none;
+  color: #050605;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+#nav #mobile-nlinks a:hover {
+  color: white;
+  background-color: #a11d20; /* Matching your site's color scheme */
+  border-radius: 5px;
+  padding-left: 15px; /* Indent on hover */
+}
+
+/* Hamburger Menu Icon */
+#nav #menu {
+  display: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Nav ka end horha ahai yahan normal wlay ka  */
+@media (max-width: 480px) {
+  #nav .btns {
+    margin: 0 auto;
+    transform: translateX(15px);
+    width: auto;
+    height: 50px;
+  }
+  #nav {
+    padding: 10px;
+    height: 80px;
+    justify-content: space-between;
+  }
+  #nav img {
+    width: 73px;
+    height: 37.5px;
+  }
+  #nav #nlinks {
+    display: none;
+  }
+  #nav #menu {
+    display: block;
+    height: 26px;
+    width: 26px;
+  }
+  /* Mobile Dropdown Styles */
+  #nav .mobile-nav-links-wrapper {
+    height: auto;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+  }
+  #nav .mobile-nav-links-wrapper .dropdown-content {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.9
+    ); /* Light background for dropdown */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-top: 20px;
+  }
+  /* dropdown-content-a */
+  #nav .mobile-nav-links-wrapper .dropdown-content-a {
+    font-size: 1rem;
+    color: #050605;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #eee; /* Divider between links */
+  }
+
+  #nav .mobile-nav-links-wrapper a {
+    /* border-bottom: 2px solid black; */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+      rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    /* font-size: 1px; */
+  }
+
+  #nav .mobile-nav-links-wrapper .dropdown-content a:hover {
+    background-color: #a11d20;
+    color: white;
+    border-radius: 5px;
+  }
+
+  /* Toggle dropdown content on click */
+  #nav .mobile-nav-links-wrapper .dropdown:hover .dropdown-content {
+    display: flex;
+  }
+
+  .mob-graphic-design-dropdown,
+  .mob-web-dev-container,
+  .mob-SMA-dropdown,
+  .mob-CM-dropdown,
+  .mob-SEO-dropdown {
+    display: flex;
+    flex-direction: column;
+    /* height: 100px; */
+    background-color: rgb(255, 255, 255);
+    width: 170px;
+    margin-left: 20px;
+    display: none;
+  }
+}
+
+/* Nav ki media queries ka end */
