@@ -1318,6 +1318,9 @@ select {
   position: relative;
   /* background-color: crimson; */
 }
+#page7 .page7-main h1{
+  font-size: 5rem;
+}
 
 /* General Styles (For Laptops and Desktops) */
 .footer {

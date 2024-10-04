@@ -290,6 +290,24 @@ const dekstopdropdownPairs = [
       }
     });
 
+
+    gsap.from("#page6", {
+      y: "100%",            
+      opacity: 0,          
+      scale: 0.6,         
+      duration: 2,          
+      ease: "power3.out",   
+      scrollTrigger: {
+        trigger: "#page6", 
+        scroller: "body",   
+        start: "top 100%",  
+        end: "top 40%",   
+        scrub: 1,           
+      }
+    });
+    
+
+
   }
 
 
