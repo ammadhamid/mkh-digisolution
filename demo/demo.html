@@ -1,276 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Client Review Slider</title>
-    <style>
-      body {
-        font-family: "Roboto", sans-serif;
-        margin: 0;
-        padding: 20px;
-        background: linear-gradient(135deg, #f9f9f9, #e2e2e2);
-        color: #333;
-      }
-      .slider-container {
-        max-width: 1200px;
-        overflow: hidden;
-        position: relative;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #e4767671;
-        border-radius: 10px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      }
-      .slider {
-        display: flex;
-        transition: transform 0.5s ease;
-      }
-      .slide {
-        flex: 0 0 100%;
-        padding: 20px;
-        box-sizing: border-box;
-        transition: transform 0.3s ease-in-out;
-      }
-      .review-card {
-        background-color: #fff;
-        border: 2px solid #a11d20;
-        border-radius: 10px;
-        padding: 20px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      .review-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-      }
-      .review-header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 15px;
-      }
-      .review-header img {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        margin-right: 15px;
-        object-fit: cover;
-        border: 2px solid #a11d20;
-      }
-      .reviewer-info {
-        display: flex;
-        flex-direction: column;
-      }
-      .reviewer-name {
-        font-weight: bold;
-        font-size: 18px;
-        color: #333;
-        margin: 0;
-      }
-      .star-rating {
-        color: #f4c542;
-        font-size: 20px;
-      }
-      .review-content {
-        font-style: italic;
-        margin-bottom: 15px;
-        flex-grow: 1;
-        color: #666;
-      }
-      .nav-button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(161, 29, 32, 0.85);
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        z-index: 10;
-        font-size: 18px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-      }
-      .nav-button.left {
-        left: 10px;
-      }
-      .nav-button.right {
-        right: 10px;
-      }
-      .nav-button:hover {
-        background-color: #a11d20;
-      }
-      @media (min-width: 768px) {
-        .slide {
-          flex: 0 0 33.333%;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="slider-container">
-      <div class="slider">
-        <div class="slide">
-          <div class="review-card">
-            <div class="review-header">
-              <img src="/api/placeholder/60/60" alt="Sarah Johnson" />
-              <div class="reviewer-info">
-                <p class="reviewer-name">Sarah Johnson</p>
-                <div class="star-rating">★★★★★</div>
-              </div>
-            </div>
-            <p class="review-content">
-              "Exceptional service! They went above and beyond to meet our
-              needs. Highly recommended!"
-            </p>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="review-card">
-            <div class="review-header">
-              <img src="/api/placeholder/60/60" alt="Michael Chen" />
-              <div class="reviewer-info">
-                <p class="reviewer-name">Michael Chen</p>
-                <div class="star-rating">★★★★☆</div>
-              </div>
-            </div>
-            <p class="review-content">
-              "Great experience overall. The team was professional and delivered
-              on time. Will use again!"
-            </p>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="review-card">
-            <div class="review-header">
-              <img src="/api/placeholder/60/60" alt="Emily Rodriguez" />
-              <div class="reviewer-info">
-                <p class="reviewer-name">Emily Rodriguez</p>
-                <div class="star-rating">★★★★★</div>
-              </div>
-            </div>
-            <p class="review-content">
-              "Impressive attention to detail. They truly understood our vision
-              and brought it to life beautifully."
-            </p>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="review-card">
-            <div class="review-header">
-              <img src="/api/placeholder/60/60" alt="David Smith" />
-              <div class="reviewer-info">
-                <p class="reviewer-name">David Smith</p>
-                <div class="star-rating">★★★★☆</div>
-              </div>
-            </div>
-            <p class="review-content">
-              "Reliable and efficient service. The results exceeded our
-              expectations. Thank you!"
-            </p>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="review-card">
-            <div class="review-header">
-              <img src="/api/placeholder/60/60" alt="Lisa Wang" />
-              <div class="reviewer-info">
-                <p class="reviewer-name">Lisa Wang</p>
-                <div class="star-rating">★★★★★</div>
-              </div>
-            </div>
-            <p class="review-content">
-              "Outstanding creativity and professionalism. They transformed our
-              ideas into reality effortlessly."
-            </p>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="review-card">
-            <div class="review-header">
-              <img src="/api/placeholder/60/60" alt="Robert Taylor" />
-              <div class="reviewer-info">
-                <p class="reviewer-name">Robert Taylor</p>
-                <div class="star-rating">★★★★☆</div>
-              </div>
-            </div>
-            <p class="review-content">
-              "A pleasure to work with. Their expertise and guidance were
-              invaluable throughout the project."
-            </p>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="review-card">
-            <div class="review-header">
-              <img src="/api/placeholder/60/60" alt="Jessica Lee" />
-              <div class="reviewer-info">
-                <p class="reviewer-name">Jessica Lee</p>
-                <div class="star-rating">★★★★★</div>
-              </div>
-            </div>
-            <p class="review-content">
-              "Fantastic communication and execution. We are thrilled with the
-              final product and would highly recommend their services."
-            </p>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="review-card">
-            <div class="review-header">
-              <img src="/api/placeholder/60/60" alt="Kevin Brown" />
-              <div class="reviewer-info">
-                <p class="reviewer-name">Kevin Brown</p>
-                <div class="star-rating">★★★★☆</div>
-              </div>
-            </div>
-            <p class="review-content">
-              "Very professional and knowledgeable team. We look forward to
-              working with them again on future projects."
-            </p>
-          </div>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="footer">
+    <div class="main">
+      <a href="../../../index/index.html">
+        <img src="../../../Assets/MKH Logo.png" alt="" class="mkh-logo"
+      /></a>
+      <div class="content">
+        <a href="" style="color: #a11d20; font-weight: 600">Resouces</a>
+        <a href="">Our Works</a>
+        <a href="">Services</a>
+        <a href="">Blog</a>
+        <a href="">Contact us</a>
+        <a href="">Portfolio</a>
       </div>
-      <button class="nav-button left"><</button>
-      <button class="nav-button right">></button>
+      <div class="resources">
+        <a href="" style="color: #a11d20; font-weight: 600">Adress</a>
+        <a id="adress" href=""
+          >12 St Georges Road Dudley Postcode DY2 8EZ</a
+        >
+        <a style="color: #a11d20; font-weight: 600" href="">Phone</a>
+        <a>+44 7397249384</a>
+        <a>+92 3448221271</a>
+      </div>
+      <div class="newsletter">
+        <h6>Subscribe</h6>
+        <p>Stay informed with our latest news and updates</p>
+        <div class="input-submit">
+          <input type="text" name="" id="" placeholder="Enter your Email" />
+          <button class="submit">Submit</button>
+        </div>
+        <p>
+          By subscribing, you agree to our Privacy Policy and consent to
+          receive updates from our company.
+        </p>
+      </div>
     </div>
-  <script>
-    const slider = document.querySelector('.slider');
-    const slides = document.querySelectorAll('.slide');
-    const leftButton = document.querySelector('.nav-button.left');
-    const rightButton = document.querySelector('.nav-button.right');
-    let currentIndex = 0;
-
-    function updateSlider() {
-        const slideWidth = slides[0].offsetWidth;
-        slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-    }
-
-    function getVisibleSlides() {
-        return window.innerWidth >= 768 ? 3 : 1;
-    }
-
-    leftButton.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateSlider();
-        }
-    });
-
-    rightButton.addEventListener('click', () => {
-        const visibleSlides = getVisibleSlides();
-        if (currentIndex < slides.length - visibleSlides) {
-            currentIndex++;
-            updateSlider();
-        }
-    });
-
-    window.addEventListener('resize', updateSlider);
-    updateSlider();
-</script>
+    <div class="line"></div>
+    <div class="final-links">
+      <div class="f-l-content">
+        <a href=""
+          >Copyright © 2024 MKH Digital Solution . All Rights Reserved</a
+        >
+        <a href="">Privacy Policy</a>
+        <a id="terms-of-service" href="">Terms of service</a>
+      </div>
+      <div class="social-sites">
+        <a href="https://www.facebook.com/mkhdigitalsolution">
+          <img src="../../../Assets/fb_footer.svg" alt=""
+        /></a>
+        <a href="https://www.instagram.com/mkhdigitalsolution">
+          <img src="../../../Assets/Insta_footer.png" alt=""
+        /></a>
+        <a href="https://www.linkedin.com/company/mkhdigitalsolutionpvtltd/"
+          ><img src="../../../Assets/lineIn-footer.png" alt=""
+        /></a>
+        <div class="image"></div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

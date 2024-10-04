@@ -34,181 +34,6 @@ body {
   z-index: 9;
   transition: all linear 0.4s;
 }
-#nav {
-  /* background-color: blue; */
-  position: relative;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  text-align: center;
-  padding: 0 40px;
-}
-
-#nav img {
-  width: 157.99px;
-  height: 65px;
-}
-
-#nlinks {
-  display: flex;
-  justify-content: space-between;
-  flex-grow: 1;
-  margin-left: 20px;
-  font-size: 1.3vw;
-}
-
-#nlinks a {
-  font-weight: 400;
-  text-decoration: none;
-  color: black;
-  margin: 0 10px;
-  width: 100px;
-  /* background-color: red; */
-  border-radius: 8px;
-  transition: background-color 0.5s 0.1s;
-}
-#nlinks a:hover {
-  color: rgb(255, 255, 255);
-  background-color: #a11d20;
-  transform: translateY(-10px);
-  /* transition: 0.1s ease-in-out; */
-}
-.btns {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  margin-left: 25vw;
-}
-
-.btns .Quote {
-  border: 1px solid black;
-  border-radius: 50px;
-  padding: 13px 16px;
-  text-align: center;
-  cursor: pointer;
-  width: 200px;
-  transition: background-color 0.5s 0s;
-}
-
-.Quote:hover {
-  background-color: #a11d20;
-  color: white;
-  border: none;
-  transform: translateY(-10px);
-}
-/* Parent container */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown button */
-.dropbtn {
-  text-decoration: none;
-  color: black;
-  /* background-color: #f1f1f1; */
-  border: none;
-  cursor: pointer;
-  display: inline-block;
-}
-
-/* Dropdown content */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  /* background-color: #5a5353; */
-  backdrop-filter: blur(10px);
-  min-width: 100px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  border-radius: 16px;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change color of dropdown button on hover */
-.dropdown:hover .dropbtn {
-  background-color: #ddd;
-}
-
-#nav #menu {
-  display: none;
-}
-#nav #mobile-nlinks {
-  height: 40vh;
-  width: 30vw;
-  position: fixed;
-  right: 0;
-  top: 0;
-  display: none;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 20px;
-  flex-direction: column;
-  background-color: rgba(170, 161, 161, 0.213);
-  backdrop-filter: blur(10px);
-}
-#nav #mobile-nlinks a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #050605;
-}
-#nav #mobile-nlinks a:hover {
-  color: rgb(255, 255, 255);
-  border: 0.5px solid #a11d20;
-  background-color: rgb(80, 80, 80);
-}
-#nav #mobile-nlinks #close {
-  margin-left: 20px;
-  height: 26px;
-  width: 26px;
-  margin-top: 20px;
-}
-/* Nav ki Media Queries */
-@media (max-width: 480px) {
-  #nav .btns {
-    margin-left: 30px;
-    height: 50px;
-    width: 50vw;
-  }
-  #nav {
-    padding: 10px;
-    height: 80px;
-  }
-  #nav img {
-    width: 73px;
-    height: 37.5px;
-  }
-  #nav #nlinks {
-    display: none;
-  }
-  #nav #menu {
-    display: initial;
-    height: 26px;
-    width: 26px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-  }
-}
-/* Nav ki media queries ka end */
 #page1 {
   height: 100vh;
   width: 100vw;
@@ -245,6 +70,8 @@ body {
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   background-image: url(../Assets/Our-work-image1-page1.png);
+  /* background-repeat: no-repeat;
+  object-fit: contai; */
 }
 #page1 .right .img1 .img2 {
   width: 80%;
@@ -256,6 +83,8 @@ body {
   right: 200px;
   border-radius: 16px;
   background-image: url(../Assets/our-work-image2-page1.png);
+  /* background-repeat: no-repeat;
+  object-fit: contai; */
 }
 #page1 .right .img1 .img3 {
   width: 75%;
@@ -268,6 +97,8 @@ body {
   left: 370px;
   border-radius: 16px;
   background-image: url(../Assets/our-work-image3-page1.png);
+  /* background-repeat: no-repeat;
+  object-fit: contai; */
 }
 .animation-of-service-page {
   height: 12vh;
@@ -455,7 +286,7 @@ text-align: center;
 /* Common styles for website containers */
 #page2 .page3-subpage-main .innercontainer .website-container {
   width: 100%;
-  max-width: 300px;
+  max-width: 385px;
   border: 2px solid #a11d20;
   border-radius: 18px;
   padding: 20px;
@@ -464,19 +295,14 @@ text-align: center;
   justify-content: center;
   align-items: center;
   line-height: 1.5;
-  height: 200px;
+  height: 385px;
   box-sizing: border-box;
   background-color: grey;
   position: relative;
   transition: 1.5s linear 0ms;
 }
 
-#page2 .page3-subpage-main .innercontainer .website-container:hover {
-  border: none;
-  height: 350px;
-  width: 120%;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
+
   /* General Styles (For Laptops and Desktops) */
   .footer {
     height: 80vh;

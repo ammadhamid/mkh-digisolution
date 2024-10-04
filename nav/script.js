@@ -167,37 +167,3 @@ gsap.to("#nav", {
   },
 });
 
-const ChangePageArr = [
-  {
-    element: document.querySelector("#full-stack-web-dev"),
-    page: "../../index/index.html",
-  },
-  {
-    element: document.querySelector("#E-commerce-page"),
-    page: "../../index/index.html",
-  },
-  {
-    element : document.querySelector('#custom-web-dev'),
-    page : "../../index/index.html"
-  },
-  {
-    element : document.querySelector('#wordpress-web'),
-    page : '../../index/index.html'
-  },
-  {
-    element : document.querySelector('#shopify-web'),
-    page : '../../index/index.html'
-  },
-  {
-    element : document.querySelector('#ui-ux-design'),
-    page : '../../index/index.html',
-  }
-];
-
-ChangePageArr.forEach(({ element, page }) => {
-  if (element) {
-    element.addEventListener("click", () => {
-      redirectpage(page);
-    });
-  }
-});

@@ -1262,11 +1262,12 @@ select {
   }
 }
 #page6 {
-  height: 60vh;
-  width: 100vw;
+  height: 40vh;
+  width: 100%;
   /* background-color: blue; */
   background-image: url("../Assets/Red-Pic.png");
   object-fit: cover;
+  /* background-repeat: no-repeat; */
 }
 #page6 .page-6-main {
   height: 50%;
@@ -1318,15 +1319,15 @@ select {
   position: relative;
   /* background-color: crimson; */
 }
+#page7 .page7-main h1{
+  font-size: 4rem;
+}
 
-/* General Styles (For Laptops and Desktops) */
 .footer {
   height: 80vh;
   width: 100%;
-  /* background-image: url("../Assets/Footer-blur.png"); */
   object-fit: contain;
   background-position: right;
-  margin-top: 650px;
   background: linear-gradient(to bottom, rgb(255, 243, 245), white);
 }
 
@@ -1343,12 +1344,19 @@ select {
   margin-left: 50px;
 }
 
+
 .footer .main .content,
 .footer .main .resources {
   display: flex;
   flex-direction: column;
   gap: 30px;
   font-size: 1vw;
+}
+.footer .main .content{
+  margin-bottom: 40px;
+}
+.footer .main .resources {
+  transform: translateY(-36px);
 }
 
 .main a {
@@ -1399,6 +1407,7 @@ select {
   border-radius: 8px;
   border: none;
   cursor: pointer;
+  font-size: 1rem;
 }
 
 .line {
@@ -1409,8 +1418,11 @@ select {
 
 .footer .final-links {
   display: flex;
-  height: 20%;
-  width: 100%;
+  /* height: 20%; */
+  height: auto;
+  width: auto;
+  /* background-color: green; */
+  padding-left: 10%;
 }
 
 .footer .final-links .f-l-content {
@@ -1427,21 +1439,21 @@ select {
 }
 
 .footer .final-links .f-l-content :nth-child(1) {
-  width: 280px;
+  width: auto;
   text-decoration: none;
 }
 
 .footer .final-links .f-l-content :nth-child(2) {
-  transform: translateX(-20px);
+  transform: translateX(30px);
 }
 
 .footer .final-links .f-l-content :nth-child(3) {
-  transform: translateX(-150px);
+  transform: translateX(-100px);
 }
 
-.footer .final-links .f-l-content :nth-child(4) {
-  transform: translateX(-250px);
-}
+/* .footer .final-links .f-l-content :nth-child(4) {
+  transform: translateX(-250px); 
+} */
 
 .footer .final-links .social-sites {
   height: 20px;
@@ -1450,8 +1462,9 @@ select {
   gap: 20px;
   margin-top: 30px;
   margin-left: 2vw;
-  transform: translateX(400px);
+  transform: translateX(200px);
 }
+
 @media (max-width: 480px) {
   .hero {
     flex-direction: column-reverse;
@@ -1826,16 +1839,19 @@ select {
   }
   #page7 {
     height: 300px;
-    transform: translateY(1150px);
+   /* background-color: red; */
+    transform: translateY(160px);
   }
   #page7 .page7-main h1 {
-    font-size: 72px;
+    font-size: 42px;
   }
   .footer {
     height: auto;
-    margin-top: 1200px;
+    margin-top: 100px;
     padding: 20px;
     background-position: center;
+    position: absolute;
+    z-index: 999;
   }
 
   .footer .main {
@@ -1849,7 +1865,6 @@ select {
     margin: 0 auto;
     margin-bottom: 10px;
     margin-right: 230px;
-    transform: translateX(-20px);
   }
 
   .footer .main .content,
@@ -1857,8 +1872,14 @@ select {
     font-size: 3.5vw;
     gap: 15px;
     margin-bottom: 20px;
+    /* justify-content: flex-start; */
+    align-items: start;
   }
 
+  .footer .main .resources {
+    margin-bottom: 50px;
+    transform: none;
+  }
   .main .newsletter {
     width: 100%;
     margin-top: 0;
@@ -1894,12 +1915,16 @@ select {
     gap: 10px;
     margin: 0 auto;
     text-align: center;
+    flex-direction: column-reverse;
   }
   .main .newsletter h6 {
     font-size: 1rem;
   }
   .main .newsletter p {
     font-size: 1rem;
+  }
+  .footer .final-links .f-l-content :nth-child(1) {
+    font-size: 0.7rem;
   }
   .footer .final-links .f-l-content :nth-child(1),
   .footer .final-links .f-l-content :nth-child(2),
@@ -1911,7 +1936,7 @@ select {
 
   .footer .final-links .social-sites {
     width: 50%;
-    transform: none;
+    transform: translateX(50px);
     justify-content: center;
     margin: 10px auto;
   }
