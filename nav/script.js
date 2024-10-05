@@ -8,16 +8,6 @@
 //   Blur.style.top = dets.y - 250 + "px";
 // });
 
-// gsap.to(".animation-abs-btn" ,{
-// })
-
-// DOM elements
-
-const phoneInputField = document.querySelector("#phone");
-const phoneInput = window.intlTelInput(phoneInputField, {
-  utilsScript:
-    "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-});
 
 const dekstopdropdownPairs = [
   {
@@ -141,29 +131,3 @@ getAQuoteCloseBtn.addEventListener("click", (e) => {
 const redirectpage = (page) => {
   window.location.href = page;
 };
-
-// const fullStackPage = document.querySelector('#full-stack-web-dev');
-// const ecommercePage = document.querySelector('#E-commerce-page')
-
-// fullStackPage.addEventListener('click' , ()=>{
-//   redirectpage('../../index/index.html')
-// })
-
-// ecommercePage.addEventListener('click' , () =>{
-//   redirectpage('../../index/index.html')
-// });
-
-gsap.to("#nav", {
-  backgroundColor: "#fff",
-  duration: 0.5,
-  height: "110px",
-  scrollTrigger: {
-    trigger: "#nav",
-    scroller: "body",
-    // markers:true,
-    start: "top -10%",
-    end: "top -11%",
-    scrub: 1,
-  },
-});
-
