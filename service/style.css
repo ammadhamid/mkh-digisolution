@@ -121,13 +121,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: translateY(10px);
 }
 .animation-of-service-page .animation {
   height: 50%;
   width: 100%;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
-  transform: rotate(-2.3deg);
+  transform: rotate(-1.6deg);
   display: flex;
 }
 
@@ -212,9 +213,20 @@ body {
   height: 100%;
   width: 422px;
   background-color: #a11d20;
-  transition: 5s linear 0.5s;
+  /* transition: 5s linear 0.5s; */
   cursor: pointer;
 }
+#main-page-of-services .services-container1 .inner-conatiner .content{
+  height: 50%;
+  width: 100%;
+  /* background-color: purple; */
+
+}
+#main-page-of-services .services-container1 .inner-conatiner .img{
+  /* background-color: red; */
+  width: 100%;
+}
+
 #main-page-of-services .services-container1 .inner-conatiner:hover{
   background: linear-gradient(to top, #000, #a11d20);
 }
@@ -226,6 +238,8 @@ body {
   top: -85%;
   left: 40%;
   background: url("../Assets/Icon-inner-container1.png");
+  /* background-color: blue; */
+  background-repeat: no-repeat;
 }
 #main-page-of-services .services-container1 .inner-conatiner .info {
   height: 251.61px;
@@ -233,7 +247,7 @@ body {
   position: relative;
   /* background-color: pink; */
   top: -85%;
-  left: 18%;
+  /* left: 18%; */
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -261,102 +275,30 @@ body {
   align-items: center;
   position: relative;
   bottom: 175px;
+  top: -186px;
 }
 .wrapper {
   display: none;
+ 
 }
 .animation-of-service-page-2 .animation {
   height: 50%;
   width: 100%;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
-  transform: rotate(-6deg);
+  transform: rotate(-4deg);
   display: flex;
 }
-.Subscribe-to-our-newsletter {
-  height: 78.15vh;
-  width: 100%;
-  background-color: blue;
-  background: url("../Assets/Service-Page-img-newsletter.png");
-  clip-path: polygon(0 27.5%, 100% 0%, 100% 100%, 0 100%);
-  position: relative;
-  top: -267px;
-  background-position: bottom;
-  object-fit: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: flex-start;
-  align-content: center;
-}
-.Subscribe-to-our-newsletter .left {
-  height: 100%;
-  width: 80%;
-  background-color: #0b0b0ba0;
-  clip-path: polygon(0 0, 100% 0%, 80% 100%, 0 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.Subscribe-to-our-newsletter .left .info {
-  height: 50%;
-  width: 50%;
-  margin-left: -200px;
-  /* background-color: red; */
-  transform: translate(-50px, 50px);
-}
-.Subscribe-to-our-newsletter .left .info h1 {
-  font-size: 3rem;
-  color: white;
-  font-weight: 900;
-}
-.Subscribe-to-our-newsletter .left .info .inp-btn {
-  /* width: 100%; */
-  /* background-color: blue; */
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-.Subscribe-to-our-newsletter .left .info .inp-btn input {
-  height: 10vh;
-  width: 32.94vw;
-  border-radius: 37px;
-  padding: 20px;
-  border: none;
-}
-.Subscribe-to-our-newsletter .left .info .inp-btn button {
-  height: 10vh;
-  width: 12.63vw;
-  border-radius: 37px;
-  margin-left: 20px;
-  background: #000;
-  color: white;
-  font-size: 1rem;
-  border: none;
-}
-#bg {
-  height: 100%;
-  width: 100%;
-  background-image: url("../Assets/Group\ 2.png");
-  object-fit: cover;
-  opacity: 0.9;
-  margin-top: 200px;
-  z-index: -999;
-}
-#bg .blur {
-  height: 35%;
-  width: 100%;
-  /* background-image: url("../Assets/Rectangle 2.png"); */
-  object-fit: cover;
-  background-position: top;
-  z-index: -1;
-}
+/* Page 7  */
+
 #page7 {
-  height: 30vh;
+  height: 10vh;
   width: 100%;
   /* background-color: blue; */
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: translateY(-200px);
 }
 #page7 .page7-main {
   height: 80%;
@@ -367,10 +309,9 @@ body {
   position: relative;
   /* background-color: crimson; */
 }
-
-
-
-
+#page7 .page7-main h1{
+  font-size: 4rem;
+}
 
 
 
@@ -455,12 +396,12 @@ body {
   #main-page-of-services .services-container1 .inner-conatiner .icon {
     height: 113.191px;
     width: 113.191px;
-    transform: translate(-20px, 240px);
+    transform: translate(-20px, 20px);
   }
   #main-page-of-services .services-container1 .inner-conatiner .info {
     height: 205.25px;
     width: 231.02px;
-    transform: translate(-20px, 250px);
+    transform: translate(30px, 30px);
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -474,154 +415,18 @@ body {
     font-size: 11.92px;
   }
   .animation-of-service-page-2 {
-    transform: translateY(-265px);
+    position: relative;
+    transform: rotate(-2.3deg);
+    top: -550px;
   }
   .animation-of-service-page-2 .animation {
     padding-top: 5px;
   }
-
-  .Subscribe-to-our-newsletter {
-    width: 100%;
-    height: 331px;
-    clip-path: polygon(0 40px, 100% 0%, 100% 100%, 0 100%);
-    /* position: relative; */
-    /* top: -267px; */
-    background-position: top 30px;
-    object-fit: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: flex-start;
-    align-content: center;
-    transform: translate(0px , -220px);
+  #page7{
+    transform: translateY(-600px);
   }
-  .Subscribe-to-our-newsletter .left {
-    /* display: none; */
-    width: 80%;
+  .footer{
+    transform: translateY(-500px);
   }
-  .Subscribe-to-our-newsletter .left .info{
-    /* display: none; */
-    /* background-color: red; */
-    height: 200px;
-    width: 280px;
-    margin: 0;
-    transform: translate(-10px ,0px);
-    margin-left: 15px;
-  }
-  .Subscribe-to-our-newsletter .left .info h1{
-    font-size: 43.83px;
-  }
-  .Subscribe-to-our-newsletter .left .info .inp-btn {
-    /* background-color: purple; */
-    height: auto;
-    flex-direction: column;
-    gap: 15px;
-
-  }
-  .Subscribe-to-our-newsletter .left .info .inp-btn input{
-    width: 200px;
-    height: inherit;
-    border-radius: 8px;
-  }
-  .Subscribe-to-our-newsletter .left .info .inp-btn button{
-    width: 100px;
-    height: 50px;
-    border-radius: 8px;
-  }
-  .Subscribe-to-our-newsletter .left .info .inp-btn button{
-    font-size: 16px;
-  }
-
- /* Same rahegi sab page mee yahan sy copy hogi  */
-
- #page7 {
-  height: 300px;
-  transform: translateY(-550px);
-}
-#page7 .page7-main h1 {
-  font-size: 72px;
-}
-.footer {
-  height: auto;
-  margin-top: 1000px;
-  padding: 20px;
-  background-position: center;
-}
-
-.footer .main {
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0;
-}
-
-.footer .main img {
-  width: 80px;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  margin-right: 230px;
-  transform: translateX(-20px);
-}
-
-.footer .main .content, .footer .main .resources {
-  font-size: 3.5vw;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.main .newsletter {
-  width: 100%;
-  margin-top: 0;
-  gap: 10px;
-  font-size: 3vw;
-}
-
-.main .newsletter .input-submit {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-}
-
-.main .newsletter .input-submit input,
-.main .newsletter .input-submit button {
-  width: 100%;
-  height: 40px;
-}
-
-.line {
-  width: 90%;
-}
-
-.footer .final-links {
-  flex-direction: column;
-  align-items: center;
-  height: auto;
-  padding: 10px 0;
-}
-
-.footer .final-links .f-l-content {
-  font-size: 4vw;
-  gap: 10px;
-  margin: 0 auto;
-  text-align: center;
-}
-.main .newsletter h6{
-font-size: 1rem;
-}
-.main .newsletter p{
-font-size: 1rem
-}
-.footer .final-links .f-l-content :nth-child(1),
-.footer .final-links .f-l-content :nth-child(2),
-.footer .final-links .f-l-content :nth-child(3),
-.footer .final-links .f-l-content :nth-child(4) {
-  transform: none;
-  width: auto;
-}
-
-.footer .final-links .social-sites {
-  width: 50%;
-  transform: none;
-  justify-content: center;
-  margin: 10px auto;
-}
-/* Yahan to copy rahegi */
+  
 }

@@ -131,22 +131,11 @@ getAQuoteCloseBtn.addEventListener("click", (e) => {
 const redirectpage = (page) => {
   window.location.href = page;
 };
-
-// const fullStackPage = document.querySelector('#full-stack-web-dev');
-// const ecommercePage = document.querySelector('#E-commerce-page')
-
-// fullStackPage.addEventListener('click' , ()=>{
-//   redirectpage('../../index/index.html')
-// })
-
-// ecommercePage.addEventListener('click' , () =>{
-//   redirectpage('../../index/index.html')
-// });
-
 gsap.to("#nav", {
   backgroundColor: "#fff",
   duration: 0.5,
   height: "110px",
+  display : "fixed",
   opacity: 0.9,
   scrollTrigger: {
     trigger: "#nav",

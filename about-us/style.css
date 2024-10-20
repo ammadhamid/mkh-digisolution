@@ -56,6 +56,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
   }
   #About-Us-Page-1 #main-About-us {
     width: 90vw;
@@ -72,13 +73,10 @@ body {
     /*  112.32vw - 98.28vw  */
   }
   #About-Us-Page-1 #main-About-us .left .img1 {
-    height: 98.28vh;
-    width: 100%;
-    background-image: url(../Assets/aboout-us-main-img.png);
+    height: 70%;
+    width: 80%;
     border-radius: 24px;
-    background-position: top left;
-    object-fit: cover;
-    background-repeat: no-repeat;
+    margin-top: 50px;
 
   }
   
@@ -93,7 +91,7 @@ body {
     font-size: 3rem;
   }
   #About-Us-Page-1 #main-About-us #right p {
-    font-size: 1.25;
+    font-size: 1.25rem;
   }
   #About-Us-Page-1 #main-About-us #right .bullet-points{
     margin-top: 120px;
@@ -139,17 +137,22 @@ body {
     height: 100%;
     /* background-color: aqua; */
     padding: 40px;
-    padding-top: 20px;
+    padding-top: 100px;
   }
   #About-Us-Page-2 #About-Us-Page-2-main #right h6 {
-    font-size: 1.25rem;
+    font-size: 2.5rem;
     line-height: 1.25;
+    font-weight: 700;
   }
   #About-Us-Page-2 #About-Us-Page-2-main #right p {
-    font-size: 1rem;
+    font-size: 1.25rem;
     margin-top: 22px;
     line-height: 1.25;
     position: relative;
+  }
+  #About-Us-Page-2 #About-Us-Page-2-main #right ul li{
+    font-size: 1.25rem;
+    line-height: 2;
   }
   
   #About-us-page-3 {
@@ -207,16 +210,17 @@ body {
     position: relative;
     /* background-color: crimson; */
   }
+  #page7 .page7-main h1{
+    font-size: 4rem;
+  }
 
 /* Nav ki Media Queries */
 @media (max-width: 480px) {
   #About-Us-Page-1{
-    /* background-color: blue; */
     flex-direction: column;
     width: auto;
   }
   #About-Us-Page-1 #main-About-us{
-    /* background-color: crimson; */
     flex-direction: column;
   }
   #About-Us-Page-1 #main-About-us .left{
@@ -229,15 +233,16 @@ body {
       margin: 0;
       background-color: grey;
       background-image: none;
+      position: relative;
+      left: 20px;
   }
   #About-Us-Page-1 #main-About-us #right{
-    /* display: none; */
     width: 100%;
     margin: 0;
   }
   #About-Us-Page-2 {
     /* background-color: crimson; */
-    transform: translate(0px ,200px);
+    transform: translate(0px ,500px);
     flex-direction: column;
   }
   #About-Us-Page-2 #About-Us-Page-2-main{
@@ -303,6 +308,9 @@ body {
   }
   #page7 .page7-main h1 {
     font-size: 72px;
+  }
+  .footer{
+    transform: translateY(1700px);
   }
 }
 /* Nav ki media queries ka end */

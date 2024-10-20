@@ -8,18 +8,64 @@
 //   Blur.style.top = dets.y - 250 + "px";
 // });
 
+if(window.innerWidth >= 786){
+    gsap.from(".contact-us-small" , {
+        x: "-50%",
+        opacity: 0,
+        scale: 0.9,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".contact-us-small",
+          scroller: "body",
+          start: "top 95%",
+          end: "top 30%",
+          scrub: 1,
+          // markers: true,
+        },
+    });
 
-// gsap.to(".animation-abs-btn" ,{
-// })
-const express = require('express');
-const nodemailer = require('nodemailer');
-const bodyParsr = require('body-parser');
-const  dotEnv = require('dotenv');
-
-const app = express();
-
-const svgElement = document.querySelector('#man-svg');
-if (svgElement) {
-    svgElement.remove();
-    console.log("svg deleted");
+    gsap.from(".form" , {
+        x: "150%",
+        opacity: 0,
+        scale: 0.9,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".form",
+          scroller: "body",
+          start: "top 95%",
+          end: "top 30%",
+          scrub: 1,
+          // markers: true,
+        },
+    })
+    gsap.from("#page7 .page7-main" , {
+        y: "50%",
+        opacity: 0,
+        scale: 0.9,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: "#page7",
+          scroller: "body",
+          start: "top 95%",
+          end: "top 30%",
+          scrub: 1,
+        },
+    })
+    gsap.from(".footer .main" , {
+        y: "50%",
+        opacity: 0,
+        scale: 0.9,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".footer",
+          scroller: "body",
+          start: "top 95%",
+          end: "top 30%",
+          scrub: 1,
+        },
+    })
 }

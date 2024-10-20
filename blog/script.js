@@ -1,25 +1,14 @@
-// var crsr = document.querySelector("#cursor");
-// var Blur = document.querySelector("#cursor-blur");
+const blog1 = document.querySelector(".blog-1");
+const blog2 = document.querySelector(".blog-2");
+const blog3 = document.querySelector(".blog-3");
+blog1.addEventListener("click", (e) => {
+  window.location.href = "./blog-1.html";
+});
 
-// document.addEventListener("mousemove", function (dets) {
-//   crsr.style.left = dets.x + "px";
-//   crsr.style.top = dets.y + "px";
-//   Blur.style.left = dets.x - 250 + "px";
-//   Blur.style.top = dets.y - 250 + "px";
-// });
+document.querySelector(".blog-2").addEventListener("click", () => {
+  window.location.href = "./blog-3.html";
+});
 
-
-// gsap.to(".animation-abs-btn" ,{
-// })
-const express = require('express');
-const nodemailer = require('nodemailer');
-const bodyParsr = require('body-parser');
-const  dotEnv = require('dotenv');
-
-const app = express();
-
-const svgElement = document.querySelector('#man-svg');
-if (svgElement) {
-    svgElement.remove();
-    console.log("svg deleted");
-}
+document.querySelector(".blog-3").addEventListener("click", () => {
+  window.location.href = "./blog-2.html";
+});
