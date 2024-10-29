@@ -8,6 +8,77 @@
 //   Blur.style.top = dets.y - 250 + "px";
 // });
 
+$(document).ready(function () {
+
+  $('#getAQuote').submit(function (e) { 
+    e.preventDefault();
+    const formData = $(this).serialize();
+    $('#process-my-req').prop('disabled',true);
+    $('#process-my-req').hide();
+    $('#process-loading').show();
+    
+    $.ajax({
+      type: "POST",
+      url: "../backend/quote/index.php",
+      data: formData,
+      success: function (response) {
+        Toastify({
+          text: response,
+          duration: 3000,
+          position: "center",
+          style: {
+            borderRadius: '20px',
+            background: "linear-gradient(to right, #212126, #9D2629)",
+          }
+        }).showToast();
+        $('#process-my-req').prop('disabled',false);
+        $('#process-loading').hide();
+        $('#process-my-req').show();
+        $('.get-a-quote-container').fadeOut();
+        $('#getAQuote')[0].reset();
+      }
+    });
+    
+  });
+
+  $('#lets-talk, #newsletter_form').submit(function (e) { 
+    e.preventDefault();
+    
+    let formData = $(this).serialize();
+
+    $.ajax({
+      type: "POST",
+      url: "../backend/newsletter/index.php",
+      data: formData,
+      success: function (response) {
+        let res = JSON.parse(response);
+        if(res.success){
+          Toastify({
+            text: res.message,
+            duration: 3000,
+            position: "center",
+            style: {
+              borderRadius: '20px',
+              background: "linear-gradient(to right, #212126, #9D2629)",
+            }
+          }).showToast();
+          $('#lets-talk')[0].reset();
+          $('#newsletter_form')[0].reset();
+        }else if(!res.success){
+          Toastify({
+            text: res.message,
+            duration: 3000,
+            position: "center",
+            style: {
+              borderRadius: '20px',
+              background: "linear-gradient(to right, #212126, #9D2629)",
+            }
+          }).showToast();
+        }
+      }
+    });
+  });
+});
 
 const dekstopdropdownPairs = [
   {

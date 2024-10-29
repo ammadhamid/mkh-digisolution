@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../nav/nav.css">
     <link rel="stylesheet" href="../demo/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
   <div class="nav-wrapper">
@@ -432,7 +434,7 @@
           </div>
         </div>
       </div>
-     <form id="form-contact-us" action="">
+     <form id="form-contact-us" method="POST">
       <div class="form"> 
         <div class="heading">
           <h1>Get in <span style="color: #a11d20;">Touch</span></h1>
@@ -444,17 +446,27 @@
             </div> 
             <input type="text" id="fname" name="fname" placeholder="Enter First Name">
             <input type="text" id="lname" name="lname" placeholder="Enter Last Name"><br>
+            
+            <div class="cntainer-of-form">
+              <label for="email"> Email:</label><br>
+              <input type="email" id="email-field" name="email" placeholder="Enter email address"><br>
+            </div>
+            <div class="cntainer-of-form">
+              <label for="phone"> Phone:</label><br>
+              <input type="text" id="phone-contact-us" name="phone-contact-us" placeholder="Enter phone number"><br>
+              <div id="phone-contact-us-err" style="color: #a11d20;"></div>
+            </div>
             <div class="cntainer-of-form">
               <label for="b-field"> Businesse Field:</label><br>
               <input type="text" id="businesse-field" name="b-field" placeholder="Enter here"><br>
             </div>
             <div class="cntainer-of-form">
-              <label for="b-field">Type of marketing</label><br>
-              <input type="text" id="businesse-field" name="b-field" placeholder="Enter here"><br>
+              <label for="marketing-field">Type of marketing</label><br>
+              <input type="text" id="businesse-field" name="marketing-field" placeholder="Enter here"><br>
             </div>
             <div class="cntainer-of-form">
-              <label for="b-field">Website Name</label><br>
-              <input type="text" id="businesse-field" name="b-field" placeholder="Enter here"><br>
+              <label for="website-field">Website Name</label><br>
+              <input type="text" id="businesse-field" name="website-field" placeholder="Enter here"><br>
             </div>
             <div class="privacy-policy">
               <input required type="checkbox" id="privacy-policy" name="privacy-policy" value="privacy-policy">
@@ -500,8 +512,10 @@
             <h6>Subscribe</h6>
             <p>Stay informed with our latest news and updates</p>
             <div class="input-submit">
-              <input type="text" name="" id="" placeholder="Enter your Email" />
+          <form method="post" id="newsletter_form">  
+              <input type="text" name="newsletter_email" id="" placeholder="Enter your Email" />
               <button class="submit">Submit</button>
+          </form>
             </div>
             <p>
               By subscribing, you agree to our Privacy Policy and consent to
@@ -544,6 +558,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
       <script src="../nav/script.js"></script>
       <script src="./script.js"></script>
 </body>
