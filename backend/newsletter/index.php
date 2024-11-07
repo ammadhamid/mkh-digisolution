@@ -6,12 +6,11 @@ if(isset($_POST['newsletter_email'])){
         echo json_encode(['message'=>'Email is required', 'success'=>false]);
         exit();
     }
-
-    // $email_check_validate = test_input($email);
-    // if(!filter_var($email_check_validate, FILTER_VALIDATE_EMAIL)){
-    //     echo json_encode(['message'=>'Invalid email format', 'success'=>false]);
-    //     exit();
-    // }
+    
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        echo json_encode(['message'=>'Invalid email format', 'success'=>false]);
+        exit();
+    }
 
     $email_check = "SELECT email FROM newsletter where email = '$email'";
     $validation = mysqli_query($conn, $email_check);
