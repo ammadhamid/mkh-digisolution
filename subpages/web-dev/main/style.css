@@ -96,6 +96,9 @@ select {
   align-items: center;
   width: 100%;
 }
+a {
+  text-decoration: none;
+}
 
 #select-a-service {
   width: 97%;
@@ -473,7 +476,7 @@ select {
   /* background-color: crimson; */
 }
 #page1-subpages .service-heading h1 {
-  transform: translateX(-480px);
+  transform: translateX(-180px);
   font-weight: 900;
   color: white;
   margin-left: 300px;

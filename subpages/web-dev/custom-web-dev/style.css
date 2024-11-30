@@ -469,14 +469,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  
-    /* background-color: crimson; */
   }
   #page1-subpages .service-heading h1 {
-    transform: translateX(-480px);
+    transform: translateX(-180px);
     font-weight: 900;
     color: white;
-    margin-left: 300px;
     font-size: 4rem;
     transition: 1s ease-in-out 0.5s;
     -webkit-text-stroke: #000000 2px;
