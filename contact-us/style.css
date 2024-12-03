@@ -42,7 +42,6 @@ body {
   height: 100vh;
   width: fit-content;
   background-color: transparent;
-  /* transform: translate(90vh , -150px); */
   border-radius: 25px;
   padding: 20px;
   transform: translate(300px , -700px);
@@ -55,6 +54,7 @@ input {
   /* background-color: #d53636; */
   margin-left: 700px;
   margin-top: 300px;
+  /* background: crimson; */
 }
 #form-contact-us .form .heading {
   height: 10vh;

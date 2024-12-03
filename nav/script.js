@@ -128,6 +128,3 @@ getAQuoteCloseBtn.addEventListener("click", (e) => {
   toggleDisplay(getAQuoteContainer, "none");
 });
 
-const redirectpage = (page) => {
-  window.location.href = page;
-};
