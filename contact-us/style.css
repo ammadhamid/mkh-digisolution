@@ -50,11 +50,8 @@ input {
   padding-left: 20px;
 }
 #form-contact-us .form {
-  /* background-color: #dd0707; */
-  /* background-color: #d53636; */
   margin-left: 700px;
   margin-top: 300px;
-  /* background: crimson; */
 }
 #form-contact-us .form .heading {
   height: 10vh;
@@ -65,20 +62,17 @@ input {
   font-size: 3rem;
 }
 #form-contact-us .form .main-form {
-  /* background-color: crimson; */
   height: 70.51vh;
   width: 45.09vw;
   margin-top: 50px;
 }
 #form-contact-us .form .main-form .names-container {
   width: 100%;
-  /* background-color: purple; */
   display: flex;
   justify-content: space-around;
 }
 #form-contact-us .form .main-form .names-container #names {
   width: 50%;
-  /* background-color: red; */
   font-size: 1rem;
 }
 #form-contact-us .form .main-form #fname,
@@ -128,8 +122,8 @@ input {
   text-align: center;
   text-rendering: geometricprecision;
   text-transform: none;
-  user-select: none;
   -webkit-user-select: none;
+  user-select: none;
   touch-action: manipulation;
   vertical-align: middle;
 }
